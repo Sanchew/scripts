@@ -11,9 +11,6 @@
 // @run-at       document-end
 // ==/UserScript==
 
-if (window.tap == window.self) {
-    console.log('fuck');
-    console.log($('.next-input--number').length);
-  $('.next-input--number').val(0);
-}
-
+$(function(){
+    $('.next-input--number').val(0);
+});
