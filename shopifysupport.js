@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Shopify Extends
 // @namespace    https://github.com/sanchew
-// @version      0.1
+// @version      0.0.1
 // @description  Fix shopify UI and Features
 // @include      /^https?://[^\/]*?cemarose[^\/]*?\/.*?orders.*/
 // @author       sanchew
