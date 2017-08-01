@@ -12,5 +12,28 @@
 // ==/UserScript==
 
 $(function(){
-    $('.next-input--number').val(0);
+    var clear = $('<button type="button" class="btn btn-xs">清空</button>');
+    clear.click(function(){
+        $('.next-input--number').val(0);
+    });
+    var all = $('<button type="button" class="btn btn-xs">全选</button>');
+    all.click(function(){
+        $('.next-input--number').each(function(){
+            $(this).val($(this).attr('max'));
+        });
+    });
+    var reverse = $('<button type="button" class="btn btn-xs">反选</button>');
+    reverse.click(function(){
+        $('.next-input--number').each(function(){
+            if($(this).val() === '0'){
+                $(this).val($(this).attr('max'));
+            }else{
+                $(this).val(0);
+            }
+        });
+    });
+    $([clear,all,reverse]).each(function(){
+        $(this).css({height:'30px','line-height':'30px',margin:'0 5px',padding:'0 5px'});
+    });
+    $('.ui-layout__section--primary .next-card__header').append([clear,all,reverse]);
 });
